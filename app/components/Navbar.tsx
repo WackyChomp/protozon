@@ -15,21 +15,21 @@ const Navbar = async () => {
           <span className='text-black font-semibold text-4xl uppercase'>Protozon</span>
         </Link>
 
-        <div className="text- bg-yellow-500 flex items-center gap-5">
+        <div className="text- bg-yellow-400 flex items-center gap-5 p-1 px-2 rounded-md">
           {session && session?.user ? (
             <>
               <Link href='/collection/create'>
-                <span>Create</span>
+                <span className='bg-blue-400 px-2 p-1 rounded-md'>Create</span>
               </Link>
               <form action={async () => {
                 'use server';
                 await signOut({ redirectTo:'/'});
               }}>
-                <button type='submit'>Logout</button>
+                <button type='submit' className='bg-blue-400 px-2 rounded-md'>Logout</button>
               </form>
 
               <Link href={`/user${session?.id}`}>
-                <span>{session?.user?.name}</span>
+                <span className='bg-blue-400 px-2 p-1 rounded-md'>{session?.user?.name}</span>
               </Link>
             </>
           ): (
