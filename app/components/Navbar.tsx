@@ -10,9 +10,9 @@ const Navbar = async () => {
   return (
     <div className='px-5 py-3 bg-green-500 shadow-sm font-work-sans'>
       <nav className="flex justify-between items-center">
-        <Link href='/' className='bg-red-700 flex items-center gap-2 rounded-md'>
-          <Image src={logo} alt='logo' width={40} height={40}/>
-          <span className='text-black font-semibold text-4xl uppercase'>Protozon</span>
+        <Link href='/' className='bg-black-200 flex items-center gap-1 rounded-md'>
+          <Image src={logo} alt='logo' width={35} height={35} className='bg-yellow-400 rounded-l-md border-4 border-black-200'/>
+          <span className='text-yellow-400 font-semibold text-4xl uppercase pr-0.5'>Protozon</span>
         </Link>
 
         <div className="text- bg-yellow-400 flex items-center gap-5 p-1 px-2 rounded-md">

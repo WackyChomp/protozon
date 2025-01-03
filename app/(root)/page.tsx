@@ -1,10 +1,13 @@
 
 export default function Home() {
   return (
-    <div className="bg-yellow-500/70 flex flex-col items-center">
+    <section className="yellow_container iso_pattern">
       <div className='heading sm:text-[54px] sm:leading-[64px] text-[36px] leading-[46px]'>
-        Protozon
+        Spread the word <br/> This is the place
       </div>
-    </div>
+      <p className="sub_heading !max-w-3xl">
+        Share your ideas, bridge new connections, and innovate!
+      </p>
+    </section>
   );
 }
