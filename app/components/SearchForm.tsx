@@ -1,10 +1,9 @@
 import Form from 'next/form';
 import SearchFormReset from './SearchFormReset';
+import { Search } from 'lucide-react';
 
-type Props = {}
-
-const SearchForm = (props: Props) => {
-  const query = 'somethin sumthin sum ting'
+const SearchForm = ({ query }: { query?: string }) => {
+  //const query = 'somethin sumthin sum ting'
 
   return (
     <Form action='/' scroll={false} className='search_form'>
@@ -19,7 +18,7 @@ const SearchForm = (props: Props) => {
         {query && ( <SearchFormReset /> )}
 
         <button type='submit' className='search_btn text-purple-600'>
-          S
+          <Search className='hover:size-8 transition'/>
         </button>
       </div>
     </Form>
