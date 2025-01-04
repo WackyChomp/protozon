@@ -1,3 +1,4 @@
+import SearchForm from "../components/SearchForm";
 
 export default function Home() {
   return (
@@ -8,6 +9,8 @@ export default function Home() {
       <p className="sub_heading !max-w-3xl">
         Share your ideas, bridge new connections, and innovate!
       </p>
+
+      <SearchForm />
     </section>
   );
 }
