@@ -36,10 +36,10 @@ body {
   }
 
   .search_form{
-    @apply max-w-3xl w-full min-h-[80px] bg-orange-500 border-[7px] border-green-500 rounded-md text-[24px] mt-8 px-5 flex flex-row items-center gap-5;
+    @apply max-w-3xl w-full min-h-[80px] bg-orange-500 border-[7px] border-green-500 rounded-[40px] text-[24px] mt-8 px-5 flex flex-row items-center gap-5;
   }
   .search_input{
-    @apply flex-1 font-bold placeholder:font-semibold placeholder:text-blue-800  w-full h-auto outline-none;
+    @apply flex-1 font-bold placeholder:font-semibold placeholder:text-blue-800 w-full h-auto px-1 outline-none rounded-[10px];
   }
   .search_btn{
     @apply size-[50px] rounded-full bg-blue-950 flex justify-center items-center !important;
