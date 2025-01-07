@@ -12,6 +12,10 @@ body {
 
 
 @layer utilities{
+  .flex-between{
+    @apply flex justify-between items-center;
+  }
+
   .heading{
     @apply uppercase bg-black-200 px-5 py-4 font-extrabold text-yellow-400 max-w-5xl text-center my-5;
   }
@@ -33,6 +37,27 @@ body {
     background-size: 100% 100%;
     background-position: center;
     background-repeat: repeat;
+  }
+
+  .section_container{
+    @apply px-6 py-10 max-w-7xl mx-auto;
+  }
+
+  .card_grid{
+    @apply grid gap-5;
+  }
+  .card_grid-sm{
+    @apply grid sm:grid-cols-2 gap-5
+  }
+  .idea-card{
+    @apply bg-black border-[7px] border-red-600 p-7 rounded-[25px] shadow-200 hover:border-green-600 transition-all duration-500 hover:shadow-300 hover:bg-purple-600;
+  }
+  .idea-card_date{
+    @apply font-medium text-[20px] bg-purple-950 px-5 py-2 rounded-full group-hover:bg-yellow-500;
+  }
+  
+  .no_result{
+    @apply text-red-700 text-sm font-normal;
   }
 
   .search_form{
