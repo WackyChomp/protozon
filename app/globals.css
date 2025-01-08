@@ -49,13 +49,23 @@ body {
   .card_grid-sm{
     @apply grid sm:grid-cols-2 gap-5
   }
-  .idea-card{
-    @apply bg-black border-[7px] border-red-600 p-7 rounded-[25px] shadow-200 hover:border-green-600 transition-all duration-500 hover:shadow-300 hover:bg-purple-600;
+
+  .idea_card{
+    @apply bg-gray-600 border-[7px] border-red-600 p-7 rounded-[25px] shadow-200 hover:border-green-600 transition-all duration-500 hover:shadow-300 hover:bg-purple-600;
   }
   .idea-card_date{
     @apply font-medium text-[20px] bg-purple-950 px-5 py-2 rounded-full group-hover:bg-yellow-500;
   }
-  
+  .idea_card_desc{
+    @apply font-normal text-[20px] line-clamp-2 my-3 text-yellow-500 break-all;
+  }
+  .idea_card_img{
+    @apply w-full h-[165px] rounded-[10px] object-cover;
+  }
+  .idea_card_btn{
+    @apply rounded-full bg-orange-400/90 font-medium text-[20px] text-green-800 px-5 py-3 !important;
+  }
+
   .no_result{
     @apply text-red-700 text-sm font-normal;
   }
