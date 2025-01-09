@@ -22,3 +22,11 @@
     <a href="https://github.com/WackyChomp/protozon/issues">Request Feature</a>
   </p>
 </div>
+
+
+<!--
+Initialize project with CLI
+npm create sanity@latest -- --project [FOUND IN PROJECT PROFILE] --dataset production --template clean
+
+npm install next-sanity@canary
+-->
