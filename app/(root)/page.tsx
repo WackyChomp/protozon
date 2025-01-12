@@ -1,21 +1,27 @@
 import IdeaCard from "@/components/IdeaCard";
 import SearchForm from "../../components/SearchForm";
+import { client } from '@/sanity/lib/client'
+import { IDEA_QUERY } from "@/lib/queries";
 
 export default async function Home({ searchParams } : {
   searchParams: Promise<{ query?: string }>
 }) {
   const query = (await searchParams).query;
 
-  const posts = [{ 
-    _createdAt: new Date(),
-    views: 201,
-    author: { _id: 1, name: 'Joshua' },
-    id: 1,
-    description: "Briefly describe what you see on screen PS: it's a kitty kat :)",
-    image: 'https://media1.tenor.com/m/RzBwcGVkMTAAAAAd/cat-kiss.gif',
-    category: 'Fur Ball',
-    title: 'Dancing Feline',
-  }]
+  // ----- EXAMPLE POST FOR TESTING HOW DATA IS RENDERED ON A CARD -----
+  // const fake_post = [{ 
+  //   _createdAt: new Date(),
+  //   views: 201,
+  //   author: { _id: 1, name: 'Joshua' },
+  //   id: 1,
+  //   description: "Briefly describe what you see on screen PS: it's not a kitty kat :(",
+  //   image: 'https://i.etsystatic.com/37712799/r/il/c03fd3/4174014590/il_fullxfull.4174014590_lj2s.jpg',
+  //   category: 'Fur Ball',
+  //   title: 'Dancing Feline',
+  // }]
+
+  const posts = await client.fetch(IDEA_QUERY)
+  console.log(JSON.stringify(posts, null, 2))
 
   return (
     <>
