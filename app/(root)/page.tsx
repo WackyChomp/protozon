@@ -1,4 +1,4 @@
-import IdeaCard from "@/components/IdeaCard";
+import IdeaCard, { IdeaCardType } from "@/components/IdeaCard";
 import SearchForm from "../../components/SearchForm";
 import { client } from '@/sanity/lib/client'
 import { IDEA_QUERY } from "@/lib/queries";
@@ -43,7 +43,7 @@ export default async function Home({ searchParams } : {
 
         <ul className="mt-7 card_grid md:grid-cols-3 sm:grid-cols-2">
           {posts?.length > 0 ? (
-            posts.map((post: IdeaCardType, index: number) => (
+            posts.map((post: IdeaCardType) => (
               <IdeaCard key={post?._id} post={post} />
             ))
           ): (

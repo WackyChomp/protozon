@@ -3,14 +3,14 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center" id='readme-top'>
-  <img src="" alt="Logo" target='blank' width="100" height="80">
-  <img src="" alt="Logo" target='blank' width="100" height="80">
-  <img src="" alt="Logo" target='blank' width="100" height="80">
+  <img src="https://i.pinimg.com/originals/76/47/0f/76470f55efbc8cc7ec81778d18febc91.gif" alt="Logo" target='blank' width="100" height="80">
+  <img src="https://i.pinimg.com/originals/76/47/0f/76470f55efbc8cc7ec81778d18febc91.gif" alt="Logo" target='blank' width="100" height="80">
+  <img src="https://i.pinimg.com/originals/76/47/0f/76470f55efbc8cc7ec81778d18febc91.gif" alt="Logo" target='blank' width="100" height="80">
 
   <h3 align="center">Protozon</h3>
 
   <p align="center">
-    description goes here
+    Gallery of Ideas and Visions
     <br />
     <br />
     <a href="https://github.com/WackyChomp/protozon"><strong>Explore the docs »</strong></a>
@@ -30,3 +30,27 @@ npm create sanity@latest -- --project [FOUND IN PROJECT PROFILE] --dataset produ
 
 npm install next-sanity@canary
 -->
+
+
+<!-- BUILT WITH -->
+## Built With
+Here are some frameworks/libraries used in this project:
+* [![TypeScript][TypeScript]][TypeScript-url]
+* [![React][React.js]][React-url]
+* [![Tailwind][Tailwind.css]][Tailwind-url]
+* [![Next][Next.js]][Next-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Next-url]: https://nextjs.org/
+[TypeScript]: https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
+[TypeScript-url]: https://www.typescriptlang.org/
+
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
+[Tailwind.css]: https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
+[Tailwind-url]: https://tailwindcss.com/
