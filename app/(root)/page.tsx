@@ -1,7 +1,9 @@
 import IdeaCard, { IdeaCardType } from "@/components/IdeaCard";
 import SearchForm from "../../components/SearchForm";
-import { client } from '@/sanity/lib/client'
 import { IDEA_QUERY } from "@/lib/queries";
+import { sanityFetch, SanityLive } from "@/sanity/lib/live";
+
+// import { client } from '@/sanity/lib/client'         // old way of fetching data
 
 export default async function Home({ searchParams } : {
   searchParams: Promise<{ query?: string }>
@@ -20,8 +22,10 @@ export default async function Home({ searchParams } : {
   //   title: 'Dancing Feline',
   // }]
 
-  const posts = await client.fetch(IDEA_QUERY)
+  // const posts = await client.fetch(IDEA_QUERY)     // old way of fetching
+  const { data: posts } = await sanityFetch({ query: IDEA_QUERY });
   console.log(JSON.stringify(posts, null, 2))
+
 
   return (
     <>
@@ -51,6 +55,8 @@ export default async function Home({ searchParams } : {
           )}
         </ul>
       </section>
+
+      <SanityLive />
     </>
   );
 }
