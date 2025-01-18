@@ -9,6 +9,7 @@ export default async function Home({ searchParams } : {
   searchParams: Promise<{ query?: string }>
 }) {
   const query = (await searchParams).query;
+  const params = { search: query || null }
 
   // ----- EXAMPLE POST FOR TESTING HOW DATA IS RENDERED ON A CARD -----
   // const fake_post = [{ 
@@ -23,7 +24,7 @@ export default async function Home({ searchParams } : {
   // }]
 
   // const posts = await client.fetch(IDEA_QUERY)     // old way of fetching
-  const { data: posts } = await sanityFetch({ query: IDEA_QUERY });
+  const { data: posts } = await sanityFetch({ query: IDEA_QUERY, params });
   console.log(JSON.stringify(posts, null, 2))
 
 

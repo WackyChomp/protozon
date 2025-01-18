@@ -24,6 +24,18 @@
 </div>
 
 
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#built-with">Built With</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+  </ol>
+</details>
+
 <!--
 Initialize project with CLI
 npm create sanity@latest -- --project [FOUND IN PROJECT PROFILE] --dataset production --template clean
@@ -42,6 +54,20 @@ Here are some frameworks/libraries used in this project:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments 🌟🤗🌟
+
+List of incredible resources that give you inspiration or point you into a direction:
+
+* [Choose an Open Source License](https://choosealicense.com)
+<br><br>
+* [Next.js](https://nextjs.org/) - React Framework
+* [Shadcn/ui](https://ui.shadcn.com/docs) - Customizable UI components
+* [Tailwind CSS](https://tailwindcss.com/docs/installation) - CSS framework
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
