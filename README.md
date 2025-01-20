@@ -44,6 +44,18 @@ npm install next-sanity@canary
 -->
 
 
+## About The Project
+Under creativity, there are no limitations to where inspiration is drawn from. In fact, it is how innovation happens!
+<br/><br/>
+If you are searching for a place to share you ideas or thoughts in a judgement-free zone, look no further with <b><u>Protozon</u></b>.
+
+<u><b>Project Purpose / Vision:</b></u>
+* Multiple-page application (MPA) for better SEO performance
+* Sleek and responsive design for satisfying seamless user experience with <u><b>Tailwind CSS</u></b>
+* Deployed with <u><b>Vercel</b></u> for accessibility and reliability no matter your situation
+* Utilizing open source tools for swift template setup, continuous updates, and transparent development
+
+
 <!-- BUILT WITH -->
 ## Built With
 Here are some frameworks/libraries used in this project:
