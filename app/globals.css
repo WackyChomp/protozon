@@ -74,6 +74,10 @@ body {
     @apply text-red-700 text-sm font-normal;
   }
 
+  .divider{
+    @apply border-dotted bg-green-300 max-w-4xl my-10 mx-auto;
+  }
+
   .search_form{
     @apply max-w-3xl w-full min-h-[80px] bg-orange-500 border-[7px] border-green-500 rounded-[40px] text-[24px] mt-8 px-5 flex flex-row items-center gap-5;
   }

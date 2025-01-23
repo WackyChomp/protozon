@@ -5,15 +5,18 @@ import { notFound } from 'next/navigation';
 import { client } from '@/sanity/lib/client'
 import { IDEA_BY_ID_QUERY } from '@/lib/queries';
 import { formatDate } from '@/lib/utils';
+import markdownit from 'markdown-it';
 
 export const experimental_ppr = true;
 
 const Page = async ({ params } : { params: Promise<{ id : string }> }) => {
   const id = (await params).id;
-
   const post = await client.fetch( IDEA_BY_ID_QUERY, {id} )
+  const md = markdownit();
 
   console.log({id});
+
+  const parsedContent = md.render(post?.pitch || '');
 
   return (
     <div>
@@ -60,10 +63,30 @@ const Page = async ({ params } : { params: Promise<{ id : string }> }) => {
 
           <div className="bg-red-400">
             <h3 className="text-3xl font-semibold">Pitch Details</h3>
-            <div className="">{post.pitch}</div>
+            <div className="bg-yellow-400">
+              <div className="">Unformatted</div>
+              {post.pitch}
+            </div>
+
+            {parsedContent ? (
+              <article
+                className='bg-orange-400 prose max-w-4xl font-work-sans break-all'
+                dangerouslySetInnerHTML={{ __html: parsedContent }}
+              />
+            ): (
+              <p className="no_result">
+                No Details Provided {`:(`}
+              </p>
+            )}
           </div>
 
         </div>
+        
+
+        <hr className='divider'/>
+
+        {/* TODO: Other Recommended Content Pieces */}
+
       </section>
     </div>
   )
