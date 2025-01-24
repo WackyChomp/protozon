@@ -87,6 +87,13 @@ body {
   .search_btn{
     @apply size-[50px] rounded-full bg-blue-950 flex justify-center items-center !important;
   }
+
+  .view_container{
+    @apply flex justify-end items-center mt-5 fixed bottom-8 right-3;
+  }
+  .view_text{
+    @apply font-medium text-[16px] bg-yellow-400 px-4 rounded-lg capitalize;
+  }
 }
 
 

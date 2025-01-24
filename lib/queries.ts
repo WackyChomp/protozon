@@ -28,3 +28,9 @@ export const IDEA_BY_ID_QUERY = defineQuery(
     pitch,
   }`
 );
+
+export const IDEA_VIEWS_QUERY = defineQuery(
+  `*[_type == 'idea' && _id == $id][0]{
+    _id, views
+  }
+`)

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -6,6 +6,9 @@ import { client } from '@/sanity/lib/client'
 import { IDEA_BY_ID_QUERY } from '@/lib/queries';
 import { formatDate } from '@/lib/utils';
 import markdownit from 'markdown-it';
+
+import View from '@/components/View';
+import { Skeleton } from '@/components/ui/skeleton';
 
 export const experimental_ppr = true;
 
@@ -86,6 +89,9 @@ const Page = async ({ params } : { params: Promise<{ id : string }> }) => {
         <hr className='divider'/>
 
         {/* TODO: Other Recommended Content Pieces */}
+        <Suspense fallback={<Skeleton className='view_skeleton'/>}>
+          <View id={id}/>
+        </Suspense>
 
       </section>
     </div>
