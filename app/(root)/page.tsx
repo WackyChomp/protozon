@@ -1,3 +1,4 @@
+import { auth } from "@/auth";
 import IdeaCard, { IdeaCardType } from "@/components/IdeaCard";
 import SearchForm from "../../components/SearchForm";
 import { IDEA_QUERY } from "@/lib/queries";
@@ -10,6 +11,9 @@ export default async function Home({ searchParams } : {
 }) {
   const query = (await searchParams).query;
   const params = { search: query || null }
+
+  const session = await auth();
+  console.log(session?.id);
 
   // ----- EXAMPLE POST FOR TESTING HOW DATA IS RENDERED ON A CARD -----
   // const fake_post = [{ 
