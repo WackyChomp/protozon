@@ -69,8 +69,8 @@ Here are some frameworks/libraries used in this project:
 
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments 🌟🤗🌟
-
+## Acknowledgments 
+🌟🤗🌟<br>
 List of incredible resources that give you inspiration or point you into a direction:
 
 * [Choose an Open Source License](https://choosealicense.com)
