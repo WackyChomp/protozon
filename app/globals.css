@@ -66,6 +66,21 @@ body {
     @apply rounded-full bg-orange-400/90 font-medium text-[20px] text-green-800 px-5 py-3 !important;
   }
 
+
+  .idea_form{ 
+    @apply max-w-2xl mx-auto bg-emerald-500 my-10 space-y-8 px-6;
+   }
+  .idea_form_label{ 
+    @apply font-bold text-[18px] text-black uppercase;
+  }
+  .idea_form_input{ 
+    @apply border-[3px] border-black px-6 py-7 text-[18px] text-black font-semibold rounded-full mt-4 placeholder:text-black-300 !important;
+  }
+  .idea_form_error{
+    @apply text-red-500 mt-2 ml-5;
+  }
+
+
   .category_tag{
     @apply font-medium text-[16px] bg-pink-700 hover:bg-pink-500 transition px-4 py-2 rounded-full;
   }
