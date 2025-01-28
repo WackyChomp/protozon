@@ -76,6 +76,9 @@ body {
   .idea_form_input{ 
     @apply border-[3px] border-black px-6 py-7 text-[18px] text-black font-semibold rounded-full mt-4 placeholder:text-black-300 !important;
   }
+  .idea_form_textarea{ 
+    @apply border-[3px] border-black p-5 text-[18px] text-black font-semibold rounded-[20px] mt-4 placeholder:text-black-300 !important;
+  }
   .idea_form_error{
     @apply text-red-500 mt-2 ml-5;
   }
