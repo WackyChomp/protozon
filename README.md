@@ -31,7 +31,7 @@
     <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
-    <li><a href="#"></a></li>
+    <li><a href="#folder-structure">Folder Structure</a></li>
     <li><a href="#"></a></li>
   </ol>
 </details>
@@ -66,6 +66,54 @@ Here are some frameworks/libraries used in this project:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+## Folder Structure
+General overview of folder/files
+```
+|--- app/
+  |--- (root)
+    |--- idea
+      |--- [id]
+        |-- page.tsx
+      |--- create
+        |-- page.tsx
+    |-- layout.tsx
+    |-- page.tsx
+  |--- api
+    |--- auth
+      |--- [[...route]]
+        |-- route.ts
+  |--- studio
+    |--- [[...tool]]       <-- sanity -->
+  |-- globals.css
+  |-- layout.tsx
+
+|--- components/
+  |--- ui        <-- shadcn-ui components -->
+  |---           <-- custom components -->
+
+|--- lib/
+  |-- queries.ts    <-- sanity -->
+  |-- utils.ts
+
+|--- public/
+
+|--- sanity
+  |--- lib
+    |-- client.ts
+    |-- image.ts
+    |-- live.ts
+    |-- write-client.ts
+  |--- schemaTypes
+    |-- author.ts
+    |-- idea.ts
+    |-- index.ts
+  |-- env.ts
+  |-- extract.json
+  |-- structure.ts
+  |-- types.ts
+```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- ACKNOWLEDGMENTS -->

@@ -18,7 +18,7 @@ const Navbar = async () => {
         <div className="text- bg-yellow-400 flex items-center gap-5 p-1 px-2 rounded-md">
           {session && session?.user ? (
             <>
-              <Link href='/collection/create'>
+              <Link href='/idea/create'>
                 <span className='bg-blue-400 px-2 p-1 rounded-md'>Create</span>
               </Link>
               <form action={async () => {

@@ -1,13 +1,18 @@
 'use client'
 
-import React, { useState } from "react"
+import React, { useActionState, useState } from "react"
 import { Input } from "./ui/input"
 import { Textarea } from "./ui/textarea"
+import { Button } from "./ui/button"
+import { Send } from "lucide-react"
+
 import MDEditor from '@uiw/react-md-editor'
 
 const IdeaForm = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
-  const [pitch, setPitch] = useState('***Sample text to fill up space***');
+  const [pitch, setPitch] = useState('');
+
+  const isPending = false;
   
   return (
     <form action={()=>{}} className='idea_form'>
@@ -66,9 +71,28 @@ const IdeaForm = () => {
         <MDEditor
           value={pitch}
           onChange={(value) => setPitch(value as string)}
+          id='pitch'
+          preview="edit"
+          height={300}
+          style={{ borderRadius:20, overflow:'hidden' }}
+          textareaProps={{
+            placeholder: 'Describe your idea/inspiration and your motivation for sharing!'
+          }}
+          previewOptions={{
+            disallowedElements: ['style']
+          }}
         />
         {errors.link && <p className="idea_form_error">{errors.link}</p>}
       </div>
+
+      <Button type='submit' className='idea_form_btn text-gray-600 hover:text-green-700 group'
+        disabled={isPending}
+      >
+        <span className="underline_hover flex">
+          {isPending ? 'Submitting...' : 'sUbMiT YoUr pItCh'}
+          <Send className='size-12 ml-2 transition group-hover:animate-spin'/>
+        </span>
+      </Button>
 
     </form>
   )

@@ -79,6 +79,9 @@ body {
   .idea_form_textarea{ 
     @apply border-[3px] border-black p-5 text-[18px] text-black font-semibold rounded-[20px] mt-4 placeholder:text-black-300 !important;
   }
+  .idea_form_btn{
+    @apply hover:bg-primary-400 border-[4px] border-black rounded-full p-5 min-h-[80px] w-full font-bold text-[20px] !important;
+  }
   .idea_form_error{
     @apply text-red-500 mt-2 ml-5;
   }
@@ -111,6 +114,12 @@ body {
   }
   .view_text{
     @apply font-medium text-[16px] bg-yellow-400 px-4 rounded-lg capitalize;
+  }
+
+
+  /* ---------- Undecided Name ---------- */
+  .underline_hover{
+    @apply bg-left-bottom bg-gradient-to-r from-blue-500 to-pink-500 bg-[length:0%_2px] group-hover:bg-[length:100%_2px] bg-no-repeat transition-all duration-500 ease-out;
   }
 }
 
