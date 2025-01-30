@@ -6,16 +6,57 @@ import { Textarea } from "./ui/textarea"
 import { Button } from "./ui/button"
 import { Send } from "lucide-react"
 
+import { z } from 'zod';
+
 import MDEditor from '@uiw/react-md-editor'
+import { formSchema } from "@/lib/validation"
 
 const IdeaForm = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [pitch, setPitch] = useState('');
 
-  const isPending = false;
+  const handleFormSubmit = async (prevState: any, formData: FormData) => {
+    try{
+      const formValues = {
+        title: formData.get('title') as string,
+        description: formData.get('description') as string,
+        category: formData.get('category') as string,
+        link: formData.get('link') as string,
+        pitch
+        // : formData.get('') as string,
+      }
+      await formSchema.parseAsync(formValues);
+      console.log(formValues);
+      
+    } catch(error) {
+      if (error instanceof z.ZodError){
+        const fieldErrors = error.flatten().fieldErrors;
+
+        setErrors(fieldErrors as unknown as Record<string, string>);
+
+        return { ...prevState, error: 'Validation Failed :(', status:'Error' }
+      }
+
+      return{
+        ...prevState,
+        error: 'A real error has occurred',
+        status: "ERROR",
+      };
+
+    } finally{
+
+    }
+  };
+
+  const [state, formAction, isPending] = useActionState(
+    handleFormSubmit, {
+      error: '',
+      status: 'initial'
+    }
+  );
   
   return (
-    <form action={()=>{}} className='idea_form'>
+    <form action={formAction} className='idea_form'>
       <div>IdeaForm Goes Here Unga Bunga</div>
 
       <div>
