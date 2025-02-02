@@ -10,10 +10,13 @@ import { z } from 'zod';
 
 import MDEditor from '@uiw/react-md-editor'
 import { formSchema } from "@/lib/validation"
+import { useToast } from "@/hooks/use-toast"
 
 const IdeaForm = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [pitch, setPitch] = useState('');
+
+  const { toast } = useToast();
 
   const handleFormSubmit = async (prevState: any, formData: FormData) => {
     try{
@@ -34,8 +37,20 @@ const IdeaForm = () => {
 
         setErrors(fieldErrors as unknown as Record<string, string>);
 
+        toast({
+          title: 'Error',
+          description: 'Please check your inputs carefully and try again!',
+          variant: 'destructive',
+        })
+
         return { ...prevState, error: 'Validation Failed :(', status:'Error' }
       }
+
+      toast({
+        title: 'Error',
+        description: 'Unexpected error has occurred',
+        variant: 'destructive',
+      })
 
       return{
         ...prevState,

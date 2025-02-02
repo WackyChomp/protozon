@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import 'easymde/dist/easymde.min.css';      // sanity markdown
 
+import { Toaster } from "@/components/ui/toaster";
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -30,6 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Toaster />
       </body>
     </html>
   );
