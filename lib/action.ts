@@ -6,7 +6,7 @@ import { writeClient } from '@/sanity/lib/write-client';
 
 // submit form through mutation with server actions
 
-export const createPitch = async ( state:any, formData, pitch:string ) => {
+export const createPitch = async ( state:any, form: FormData, pitch:string ) => {
   const session = await auth();
 
   if(!session) return { error: "Not signed in", status:"ERROR" }

@@ -1,9 +1,14 @@
 'use client'
 
 import React, { useActionState, useState } from "react"
+import { useRouter } from "next/navigation"
+
 import { Input } from "./ui/input"
 import { Textarea } from "./ui/textarea"
 import { Button } from "./ui/button"
+
+import { createPitch } from "@/lib/action"
+
 import { Send } from "lucide-react"
 
 import { z } from 'zod';
@@ -16,6 +21,8 @@ const IdeaForm = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [pitch, setPitch] = useState('');
 
+  const router = useRouter();
+
   const { toast } = useToast();
 
   const handleFormSubmit = async (prevState: any, formData: FormData) => {
@@ -26,10 +33,23 @@ const IdeaForm = () => {
         category: formData.get('category') as string,
         link: formData.get('link') as string,
         pitch
-        // : formData.get('') as string,
       }
       await formSchema.parseAsync(formValues);
       console.log(formValues);
+
+      const result = await createPitch(prevState, formData, pitch);
+      console.log(result);
+
+      if(result.status == 'SUCCESS'){
+
+        toast({
+          title: 'Success',
+          description: 'Your idea pitch has been created successfully!',
+        })
+        router.push(`/idea/${result._id}`)
+      }
+
+      return result;
       
     } catch(error) {
       if (error instanceof z.ZodError){
