@@ -58,3 +58,17 @@ export const AUTHOR_BY_ID_QUERY = defineQuery(
    bio
   }
 `)
+
+export const IDEA_BY_AUTHOR_QUERY = defineQuery(
+  `*[_type == 'idea' && author.ref == $id] | order(_createdAt desc){
+    _id, 
+    title, 
+    slug, 
+    _createdAt, 
+    author -> { _id, name, image, bio }, 
+    views, 
+    description, 
+    category, 
+    image,
+  }`
+);

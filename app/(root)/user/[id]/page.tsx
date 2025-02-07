@@ -1,8 +1,13 @@
+import { Suspense } from "react";
 import { auth } from "@/auth";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { client } from '@/sanity/lib/client';
 import { AUTHOR_BY_ID_QUERY } from "@/lib/queries";
+
+import UserIdeas from "@/components/UserIdeas";
+
+export const experimental_ppr = true;
 
 
 const Page = async ({ params }: { params: Promise<{id:string}> }) => {
@@ -47,6 +52,12 @@ const Page = async ({ params }: { params: Promise<{id:string}> }) => {
         <p className="text-2xl font-bold">
           {session ?.id == id ? 'Your' : 'All'} Ideas
         </p>
+        <ul>
+          <Suspense fallback={<p>loading...</p>}>
+            {/* add all ideas by user */}
+            <UserIdeas id={id} />
+          </Suspense>
+        </ul>
       </div>
       
     </section>
