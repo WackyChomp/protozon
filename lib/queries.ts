@@ -60,7 +60,7 @@ export const AUTHOR_BY_ID_QUERY = defineQuery(
 `)
 
 export const IDEA_BY_AUTHOR_QUERY = defineQuery(
-  `*[_type == 'idea' && author.ref == $id] | order(_createdAt desc){
+  `*[_type == 'idea' && author._ref == $id] | order(_createdAt desc){
     _id, 
     title, 
     slug, 

@@ -65,6 +65,9 @@ body {
   .idea_card_btn{
     @apply rounded-full bg-orange-400/90 font-medium text-[20px] text-green-800 px-5 py-3 !important;
   }
+  .idea_card_skeleton{
+    @apply w-full h-96 rounded-[22px] bg-red-400;
+  }
 
 
   .idea_form{ 
