@@ -49,7 +49,7 @@ const IdeaCard = ({ post }: { post: IdeaTypeCard}) => {
           </Link>
         </div>
         <Link href={`/user/${author?._id}`}>
-          <Image src='https://placehold.co/48x48' alt='image placeholder' width={50} height={50} className="rounded-full border-2 border-blue-500" />
+          <Image src={author?.image!} alt={author?.name!} width={50} height={50} className="rounded-full border-2 border-blue-500" />
         </Link>
       </div>
 
