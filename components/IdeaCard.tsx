@@ -40,10 +40,10 @@ const IdeaCard = ({ post }: { post: IdeaTypeCard}) => {
       <div className="flex-between mt-5 gap-5">
         <div className="flex-1">
           <Link href={`/user/${author?._id}`}>
-            <p className="text-16-medium line-clamp-1">{author?.name}</p>
+            <p className="text-[16px] font-medium line-clamp-1">{author?.name}</p>
           </Link>
           <Link href={`/idea/${_id}`}>
-            <h3 className="text-26-semibold line-clamp-1">
+            <h3 className="text-[26px] font-semibold line-clamp-1">
               {title}
             </h3>
           </Link>
@@ -60,7 +60,7 @@ const IdeaCard = ({ post }: { post: IdeaTypeCard}) => {
 
       <div className="flex-between gap-3 mt-5">
         <Link href={`/?query${category?.toLowerCase()}`}>
-          <p className="text-16-medium">{category}</p>
+          <p className="text-[16px] font-medium">{category}</p>
         </Link>
         <Button className='idea_card_btn'>
           <Link href={`/idea/${_id}`}>
