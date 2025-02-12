@@ -35,6 +35,7 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
+        <li><a href="#installations">Installations</a></li>
         <li><a href="#setup">Setup</a></li>
       </ul>
     </li>
@@ -125,6 +126,28 @@ General overview of folder/files
 
 <!-- GETTING STARTED -->
 ## Getting Started
+
+### Installations
+1. Libraries and packages used
+    ```sh
+    npm install next-auth@beta
+    npm install server-only
+
+    npm install tailwindcss-animate
+    npm install @tailwindcss/typography
+
+    npx shadcn@latest init
+    npx shadcn@latest add avatar button input textarea skeleton toast
+
+    npm install markdown-it
+    npm i @uiw/react-md-editor
+    npm install slugify
+
+    npm install next-sanity@canary
+
+    npx sanity@latest typegen generate
+    *** Only run to update sanity when new schemas or queries are added ***
+    ```
 
 ### Setup
 Quickly running locally

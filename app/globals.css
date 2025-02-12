@@ -34,7 +34,7 @@ body {
       rgba(255, 0, 0, 0.6) 50.5%,
       transparent 50.5%
     );
-    background-size: 100% 100%;
+    background-size: 10% 100%;
     background-position: center;
     background-repeat: repeat;
   }
@@ -104,6 +104,13 @@ body {
 
   .category_tag{
     @apply font-medium text-[16px] bg-pink-700 hover:bg-pink-500 transition px-4 py-2 rounded-full;
+  }
+
+  .date_tag{
+    @apply bg-pink-400 px-6 py-3 font-work-sans font-bold rounded-sm uppercase relative date_tag_tri;
+  }
+  .date_tag_tri {
+    @apply before:content-[''] before:absolute before:top-2 before:left-2 before:border-t-[10px] before:border-t-black before:border-r-[10px] before:border-r-transparent after:content-[''] after:absolute after:bottom-2 after:right-2 after:border-b-[10px] after:border-b-black after:border-l-[10px] after:border-l-transparent;
   }
 
   .no_result{
