@@ -39,17 +39,10 @@
         <li><a href="#setup">Setup</a></li>
       </ul>
     </li>
-    <li><a href="#"></a></li>
-    <li><a href="#"></a></li>
+    <!-- <li><a href="#"></a></li> -->
+    <!-- <li><a href="#"></a></li> -->
   </ol>
 </details>
-
-<!--
-Initialize project with CLI
-npm create sanity@latest -- --project [FOUND IN PROJECT PROFILE] --dataset production --template clean
-
-npm install next-sanity@canary
--->
 
 
 ## About The Project
@@ -57,8 +50,9 @@ Under creativity, there are no limitations to where inspiration is drawn from. I
 <br/><br/>
 If you are searching for a place to share you ideas or thoughts in a judgement-free zone, look no further with <b><u>Protozon</u></b>.
 
-<u><b>Project Purpose / Vision:</b></u>
+<u><b>Project Features / Vision:</b></u>
 * Multiple-page application (MPA) for better SEO performance
+* Quick loading experience and content management from <u><b>Sanity.io</u></b>
 * Sleek and responsive design for satisfying seamless user experience with <u><b>Tailwind CSS</u></b>
 * Deployed with <u><b>Vercel</b></u> for accessibility and reliability no matter your situation
 * Utilizing open source tools for swift template setup, continuous updates, and transparent development
@@ -71,6 +65,7 @@ Here are some frameworks/libraries used in this project:
 * [![React][React.js]][React-url]
 * [![Tailwind][Tailwind.css]][Tailwind-url]
 * [![Next][Next.js]][Next-url]
+* [![Sanity][Sanity.io]][Sanity-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -128,7 +123,7 @@ General overview of folder/files
 ## Getting Started
 
 ### Installations
-1. Libraries and packages used
+1. Some libraries and packages used
     ```sh
     npm install next-auth@beta
     npm install server-only
@@ -177,6 +172,7 @@ List of incredible resources that give you inspiration or point you into a direc
 * [Next.js](https://nextjs.org/) - React Framework
 * [Shadcn/ui](https://ui.shadcn.com/docs) - Customizable UI components
 * [Tailwind CSS](https://tailwindcss.com/docs/installation) - CSS framework
+* [Sanity.io](https://www.sanity.io/) - Manage content across websites, apps, and platforms
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -191,3 +187,13 @@ List of incredible resources that give you inspiration or point you into a direc
 [React-url]: https://reactjs.org/
 [Tailwind.css]: https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
 [Tailwind-url]: https://tailwindcss.com/
+
+[Sanity.io]: https://img.shields.io/badge/Sanity-EF3939?style=for-the-badge&logo=Sanity&logoColor=white
+[Sanity-url]: https://www.sanity.io/
+
+<!--
+Initialize project with CLI
+npm create sanity@latest -- --project [FOUND IN PROJECT PROFILE] --dataset production --template clean
+
+npm install next-sanity@canary
+-->

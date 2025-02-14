@@ -12,7 +12,7 @@ const SearchFormReset = () => {
 
   return (
     <button type='reset' onClick={reset}>
-      <Link href='/' className='search_btn text-purple-600'>
+      <Link href='/' className='search_btn text-primary-400'>
         <X className='hover:rotate-180 transition'/>
       </Link>
     </button>

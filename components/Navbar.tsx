@@ -12,27 +12,27 @@ const Navbar = async () => {
   const session = await auth();
 
   return (
-    <div className='px-5 py-3 bg-green-500 shadow-sm font-work-sans'>
+    <div className='px-5 py-3 bg-red-500 shadow-sm font-work-sans'>
       <nav className="flex justify-between items-center">
         <Link href='/' className='bg-black-200 flex items-center gap-1 rounded-md'>
           <Image src={logo} alt='logo' width={35} height={35} className='bg-yellow-400 rounded-l-md border-4 border-black-200'/>
           <span className='text-yellow-400 font-semibold text-4xl uppercase pr-0.5'>Protozon</span>
         </Link>
 
-        <div className="bg-yellow-400 flex items-center gap-5 p-1 px-2 rounded-md">
+        <div className="bg-black-200 flex items-center gap-5 p-1 px-2 rounded-md">
           {session && session?.user ? (
             <>
-              <Link href='/idea/create'>
+              <Link href='/idea/create' className='flex flex-col items-center'>
                 <span className='bg-blue-400 px-2 p-1 rounded-md max-sm:hidden'>Create</span>
-                <BadgePlus className='size-6 sm:hidden' />
+                <BadgePlus className='text-primary-400 size-6 sm:hidden' />
               </Link>
               <form action={async () => {
                 'use server';
                 await signOut({ redirectTo:'/'});
               }}>
-                <button type='submit'>
+                <button type='submit' className='flex flex-col items-center'>
                   <span className='bg-blue-400 px-2 p-1 rounded-md max-sm:hidden'>Logout</span>
-                  <LogOut className='size-6 sm:hidden text-red-500' />
+                  <LogOut className='size-6 sm:hidden text-primary-400' />
                 </button>
               </form>
 
